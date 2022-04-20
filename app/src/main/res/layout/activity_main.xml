@@ -27,8 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/main_recycle"
-        />
+        tools:listitem="@layout/main_recycle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

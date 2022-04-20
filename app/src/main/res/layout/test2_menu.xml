@@ -6,13 +6,12 @@
     android:background="#d3d3d3">
 
     <TextView
-        android:id="@+id/tabTitle"
+        android:id="@+id/test2TabTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ALEXANDER WANG"
         android:textSize="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="10dp"
-        />
+        android:padding="10dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

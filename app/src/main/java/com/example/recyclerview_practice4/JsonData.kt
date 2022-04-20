@@ -8,7 +8,7 @@ class JsonData : ArrayList<JsonData.JsonDataItem>(){
         @SerializedName("list")
         var list: List<Test>?,
         @SerializedName("tabList")
-        var tabList: List<Test3>?,
+        var tabList: List<Test2>?,
         @SerializedName("title")
         var title: String?
     ) {
@@ -20,7 +20,7 @@ class JsonData : ArrayList<JsonData.JsonDataItem>(){
             @SerializedName("title")
             var title: String?
         )
-        data class Test3(
+        data class Test2(
             @SerializedName("list")
             var list: List<detailImg>?,
             @SerializedName("tabName")
