@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 
-class MainAdapter(private val context: Context,private val jsonData : List<JsonData.JsonDataItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class MainAdapter(private val context: Context,private val jsonData : List<JsonData>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     inner class ItemViewHolder(itemView: View, parent : ViewGroup): RecyclerView.ViewHolder(itemView){
         val view = LayoutInflater.from(context).inflate(R.layout.main_recycle,parent,false)
         val test1_menu = itemView.findViewById<RecyclerView>(R.id.test1_menu)
@@ -17,6 +17,7 @@ class MainAdapter(private val context: Context,private val jsonData : List<JsonD
         val test3_items = itemView.findViewById<RecyclerView>(R.id.test3_items)
 
         fun bind(jsonData: JsonData.JsonDataItem?) {
+            test1_menu.adapter = Menu1Adapter(context,jsonData.)
 
 
         }
@@ -24,20 +25,17 @@ class MainAdapter(private val context: Context,private val jsonData : List<JsonD
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        TODO("Not yet implemented")
         val view = LayoutInflater.from(context).inflate(R.layout.main_recycle,parent,false)
         return ItemViewHolder(view,parent)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
         (holder as? ItemViewHolder)?.let{
             it.bind(jsonData?.getOrNull(position))
         }
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
         return jsonData?.size ?: 0
     }
 }
